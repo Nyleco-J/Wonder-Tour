@@ -1,0 +1,68 @@
+.header{
+    .container{
+        padding: unset;
+    }
+    padding: 2rem 0;
+    
+    background-color: white;
+    &__wrapper{
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+    }
+    .toggle__menu{
+        span{
+            background-color: black;
+            width: 3rem;
+            height: .3rem;
+            display: block;
+            margin-bottom: .5rem;
+            border-radius: 5rem;
+
+        }
+    }
+    .toggle__menu1{
+        span{
+            background-color: black;
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            border-radius: 50%;
+            margin-bottom: .5rem;
+            right: 100%;
+        }
+    }
+    &__logo{
+        img{
+            width: 17rem;
+        }
+    }
+    &__nav{
+        padding: 2rem 0;
+        background-color: aqua;
+        width: 50%;
+        .socmed{
+            border-bottom: 1px solid gray;
+            padding: 1rem;
+            ul{
+                  display: flex;
+                gap: 1rem;
+                    
+            }
+        } 
+        .navi{
+            padding: 2rem;
+            ul{
+                  gap: 1rem;
+                li{
+                    padding-bottom: 2rem;
+                    a{
+                        color: black;
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+        }   
+    }
+}
