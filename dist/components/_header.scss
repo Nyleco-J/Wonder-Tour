@@ -1,6 +1,7 @@
 .header{
     position: relative;
     position: fixed;
+    z-index: 999;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     .container{
@@ -162,7 +163,9 @@
         max-width: 50%;
         top: 6.5rem;
         left: -50%;
+        height: 100vh;
         transition: 300ms;
+        overflow: auto;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         &.open{
             left: 0;
@@ -192,38 +195,39 @@
         .navi{
             cursor: pointer;
             margin-top: 2rem;
-            
+           
             ul{
-                  gap: 1rem;
+                gap: 1rem;
                 li{
-                    padding: 0 2rem;
-                    display: flex;
+                    display: block;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 1.5rem;
                     margin-bottom: .5rem;
+                    
                     transition: .5s ease;
                     i.open{
                         transform: rotate(180deg) ;
                          transition: 300ms;
                     }
-                    &.active{
+                    &.active a{
                         background-color: $clr-primary-light;
                         a{
                             color: $clr-light;
                         }
                     }
                     
-                    &:hover{
+                    & a:hover{
                         background-color: $clr-primary-light;
                         color: $clr-light;
-                        a{
-                            color: $clr-light;
-                        }
+                        
                     }
                     a{
                         color: black;
                         font-size: 1.7rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 2rem;
                     }
                     i{
                         font-size: 1.2rem;
@@ -237,7 +241,8 @@
                 h2{
                     color: green;
                     margin-left: 1.5rem;
-                    font-size: 3rem;
+                    font-size: 2.5rem;
+                    padding-top: 2rem;
                 }
                 hr{
                     width: 90%;
@@ -246,13 +251,13 @@
                 ul{
                     padding-top: 1rem;
                     li{
-                        
-                        padding: .5rem 3rem;
-                       
+                        a{
+                            padding: 1rem 4rem;
+                        }
                     }
                 }
                 &.open{
-                    max-height: 20rem;
+                    max-height: 100rem;
                     overflow: visible;
                 }
             }
@@ -291,37 +296,105 @@
                     order: 2;
                     border-bottom: unset;
                     height: fit-content;
+                    ul{
+                        li{
+                            i{
+                                color: $clr-light;
+                                &:hover{
+                                    color: #7CC4BB;;
+                                }
+                            }
+                        }
+                    }
                 }
                 .navi{
                     margin-top: unset;
                     transition: 300ms;
                     ul{
+                        position: relative;
                         display: flex;
+                        gap: unset;
                         li{
+                            margin-right: 2rem;
                             margin-bottom: unset;
-                            
+                            position: relative;
+                            &:hover{
+                                background-color: #304559;
+                            }
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                width: 100%;
+                                height: 50px;
+                                bottom: 14px;
+                                z-index: 999;
+                                transform: scaleX(0);
+                                transform-origin: center;
+                                transition: transform 0.25s ease-out;
+                            }
+                            &:hover:after{
+                                border-top: 4px solid #01b3a7;
+                                transform: scaleX(1);
+                                transform-origin: top left;
+                            }
                             a{
                                 color: $clr-light;
-                                font-weight: bold;
+                                font-weight: bold;  
                             }
-                            
                             i{
                                 display: none;
                             }
-                            &.active{
+                            &.active a{
                                 background-color: unset;
                                 background-color: #304559;
                                 border-top: 4px solid #01b3a7;
-                                transform-origin: top left;
+                                transform-origin: bottom;
                             }
                             &:hover{
-                                background-color: #304559;
-                                border-top: 4px solid #01b3a7;
-                                transform-origin: top left;
+                                .drop{
+                                    display: block;
+                                    hr{
+                                        display: none;
+                                    }
+                                }
                             }
-                        }
+                         
+                        }                
                         .drop{
+                            position: absolute;
+                            max-height: 40rem;
+                            height: fit-content;
+                            top: 5.8rem;
+                            width: 30rem;
+                            left: 0;
                             display: none;
+                            ul{
+                                display: flex;
+                                flex-direction: column;
+                                li{
+                                    background-color: unset;
+                                    background-color: white;
+                                    border-top: unset;
+                                    padding: 1rem;
+                                    a{
+                                        // width: 8rem;
+                                        color: black;
+                                        font-weight: unset;
+                                        font-size: 1.5rem;
+                                        padding-top: unset;
+                                        padding: 1rem;
+                                    }
+                                    &:hover:after{
+                                        border-top: unset;
+                                        transform: scaleX(1);
+                                    }
+                                   
+                                }
+                            }
+                            #gallery{
+                            width: 50rem;
+                            }  
                         }
                     }
                 }
@@ -374,44 +447,68 @@
 //     }
 // }
 .get-in-touch{
-    &__wrapper{
-        background-image: url("../img/slide3.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
+
     .slider{
         width: 100%;
         height: 100vh;
         background-size: cover;
         background-position: center;
-        background-image: url('/img/slide4.jpg');
+        display: flex;
+        place-items: center;
+        
+    }
+    .slider#first{
+        background-image: url("../img/slide.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .slider#second{
+        background-image: url("../img/slide2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .slider#third{
+        background-image: url("../img/slide3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
     }
     .first{
         color: $clr-light;
-        padding: 25rem 0;
+        justify-content: center;
         h3{
-            font-size: 1.5rem;
-            max-width: 70rem;
+            font-size: 1.9rem;
+            max-width: 45rem;
             font-weight: 400;
-        
+            font-family: "Montserrat", sans-serif, Arial, sans-serif;
         }
         h1{
             padding-bottom: 3rem;
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 100;
+            font-family: "Montserrat", sans-serif, Arial, sans-serif;
             span{
                 font-weight: 800;
             }
         }
         a.get{
-            border: 2px solid $clr-light;
+            border: 3px solid #7CC4BB;
             padding: 1.5rem 4rem;
             color: $clr-light;
             position: relative;
             width: 50px;
             height: 50px;
+            font-size: 2rem;
            &:hover{
-            z-index: 1;
+            z-index: 99;
             span{
                 color: $clr-light;
             }
@@ -421,7 +518,7 @@
                 position: absolute;
                 left: 0;
                 width: 100%;
-                height: 50px;
+                height: 55px;
                 bottom: -1px;
                 z-index: 999;
                 transform: scaleX(0);
@@ -429,7 +526,7 @@
                 transition: transform 0.25s ease-out;
               }
               &:hover:after {
-                background: green;
+                background:#7CC4BB;
                 transform: scaleX(1);
                 transform-origin: center;
                 z-index: -1;
@@ -439,6 +536,21 @@
               }
         }
     }
+    
+    @include mediaQuery($break-lg){
+      
+            .slider{
+                .first{
+                    h3{
+                        max-width: unset;
+                    }
+                    h1{
+                        font-size: 8rem;
+                    }
+                }
+            }
+           
+        
     }
     
 }

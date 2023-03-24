@@ -28,7 +28,14 @@ dot.addEventListener("click", ()=>{
 const fachev1 = document.querySelectorAll(".navi .down")
 fachev1.forEach((song) => {
     song.addEventListener("click", () => {
-        song.nextElementSibling.classList.toggle("open");
+        song.querySelector(".drop").classList.toggle("open");
         song.querySelector("i").classList.toggle("open");
     })
+});
+var slider = tns({
+  container: '.get-in-touch__wrapper',
+  items: 1,
+  axis: 'vertical',
+  slideBy: 'page',
+  autoplay: true
 });

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <title>Wonder Tour - Home</title>
 </head>
 <body>
@@ -56,21 +55,24 @@
             <div class="navi">
                 <ul>
                     <li class="active"><a href="">Home</a></li>
-                    <li class="down"><a href="#">About</a><i class="fa-solid fa-chevron-down"></i></li>
-                        <div class="drop">
+                    <li class="down"><a href="#">About<i class="fa-solid fa-chevron-down"></i></a>
+                    
+                        <div class="drop" id="ab">
                             <ul>
                                 <li ><a href="">Our team</a></li>
                             </ul>
                         </div> 
+                    </li>
                         
-                    <li class="down"><a href="#">Our Tours</a><i class="fa-solid fa-chevron-down"></i></li>
-                    <div class="drop">
+                    <li class="down"><a href="#">Our Tours<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="drop" id="our">
                         <ul>
                             <li ><a href="">Single tour</a></li>
                         </ul>
                     </div> 
-                    <li class="down"><a href="#">Gallery</a><i class="fa-solid fa-chevron-down"></i></li>
-                    <div class="drop">
+                </li>
+                    <li class="down"><a href="#">Gallery<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="drop" id="gallery">
                         <ul>
                             <li><a href="">Grid Gallery</a></li>
                             <li><a href="">Full Width Gallery</a></li>
@@ -78,8 +80,9 @@
                             <li><a href="">Full Width Masonry Gallery</a></li>
                         </ul>
                     </div> 
-                    <li class="down"><a href="#">Blog</a><i class="fa-solid fa-chevron-down"></i></li>
-                    <div class="drop">
+                </li>
+                    <li class="down"><a href="#">Blog<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="drop" id="blg">
                         <ul>
                             <li><a href="">Classic Blog</a></li>
                             <li><a href="">Grid Blog</a></li>
@@ -88,9 +91,10 @@
                             <li><a href="">Blog Post</a></li>
                         </ul>
                     </div> 
+                </li>
                     <li><a href="#">Contact Us</a></li>
-                    <li class="down"><a href="#">Pages</a><i class="fa-solid fa-chevron-down"></i></li>
-                    <div class="drop">
+                    <li class="down"><a href="#">Pages<i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="drop" id="page">
                         <h2>Elements</h2>
                         <hr>
                         <ul>
@@ -118,6 +122,7 @@
                             <li><a href="">Search results</a></li>
                         </ul>
                     </div> 
+                </li>
                 </ul>
             </div>
         </div>
@@ -127,17 +132,44 @@
   
 
     <section class="get-in-touch">
+        
              <div class="get-in-touch__wrapper">
-                <div class="slider">
-                    <div class="first">
-               <h3>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL A</h3>
-               <h1>Explore <span>The World</span></h1>
-               <a href="" class="get"><span>Get in Touch</span> </a>
+                <div id="first" class="slider">
+                    <div class="container">
+                        <div class="first">
+                            <h3>ENJOY THE BEST DESTINATIONS WITH OUR TRAVEL AGENCY</h3>
+                            <h1>Explore <span>The World</span></h1>
+                            <a href="" class="get"><span>Get in Touch</span> </a>
+                         </div>
+                    </div>
             </div>
+                <div id="second" class="slider">
+                    <div class="container">
+                        <div class="first">
+                            <h3>A TEAM OF PROFESSIONAL TRAVEL EXPERTS</h3>
+                            <h1>Trust<span>Our Experience</span></h1>
+                            <a href="" class="get"><span>Get in Touch</span> </a>
+                         </div>
+                    </div> 
+            </div>
+                <div id="third" class="slider">
+                    <div class="container">
+                        <div class="first">
+                            <h3>BUILD YOUR NEXT HOLIDAY TRIP WITH US</h3>
+                            <h1>Create<span>Your Tour</span></h1>
+                            <a href="" class="get"><span>Get in Touch</span> </a>
+                         </div>
+                    </div>    
             </div>
             </div>
     </section>
     
-<script src="./script.js"></script>
+    
+        
+      
+        
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
