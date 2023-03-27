@@ -39,3 +39,14 @@ var slider = tns({
   slideBy: 'page',
   autoplay: true
 });
+
+const btop =document.querySelector(".up") ;
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if(window.pageYOffset >=10){
+    btop.classList.add("show")
+  }
+  else{
+    btop.classList.remove("show")
+  }
+});

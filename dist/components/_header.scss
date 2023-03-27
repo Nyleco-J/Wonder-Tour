@@ -219,7 +219,6 @@
                     & a:hover{
                         background-color: $clr-primary-light;
                         color: $clr-light;
-                        
                     }
                     a{
                         color: black;
@@ -318,6 +317,10 @@
                             margin-right: 2rem;
                             margin-bottom: unset;
                             position: relative;
+                            & a:hover{
+                                background-color: unset;
+                                color: $clr-light;
+                            }
                             &:hover{
                                 background-color: #304559;
                             }
@@ -354,6 +357,19 @@
                             &:hover{
                                 .drop{
                                     display: block;
+                                    ul{
+                                        li:hover {
+                                            a{
+                                                border-left: #01b3a7 3px  solid;
+                                                transition: 300ms;
+                                                // transition: all .2s ease;
+                                                height: 30px;
+                                                margin-left: 1rem;
+                                                // width: fit-content;
+                                            }
+                                        }
+                                        
+                                    }
                                     hr{
                                         display: none;
                                     }
@@ -363,21 +379,23 @@
                         }                
                         .drop{
                             position: absolute;
-                            max-height: 40rem;
                             height: fit-content;
-                            top: 5.8rem;
+                            max-height: fit-content;
+                            top: 6.7rem;
                             width: 30rem;
                             left: 0;
                             display: none;
+                            background-color: unset;
+                            background-color: white;
                             ul{
                                 display: flex;
                                 flex-direction: column;
                                 li{
                                     background-color: unset;
-                                    background-color: white;
                                     border-top: unset;
                                     padding: 1rem;
                                     a{
+                                        position: sticky;
                                         // width: 8rem;
                                         color: black;
                                         font-weight: unset;
@@ -395,7 +413,13 @@
                             #gallery{
                             width: 50rem;
                             }  
+                            #page{
+                                @include grid(3, 0);
+                                display: flex;
+                                max-height: fit-content;
+                            }
                         }
+                       
                     }
                 }
             
@@ -434,125 +458,142 @@
           
     }
 }
-// .get-in-touch{
-//     .swiper{
-//         width: 70%;
-//         height: fit-content;
-//     }
-//     .swiper-slide img{
-//         width: 100%;
-//         align-items: center;
-//         justify-content: center;
-//         display: flex;
-//     }
-// }
-.get-in-touch{
 
-    .slider{
-        width: 100%;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        place-items: center;
+// .get-in-touch{
+
+//     .slider{
+//         width: 100%;
+//         height: 100vh;
+//         background-size: cover;
+//         background-position: center;
+//         display: flex;
+//         place-items: center;
         
-    }
-    .slider#first{
-        background-image: url("../img/slide.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100vh;
-    }
-    .slider#second{
-        background-image: url("../img/slide2.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100vh;
-    }
-    .slider#third{
-        background-image: url("../img/slide3.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100vh;
-    }
-    .first{
-        color: $clr-light;
-        justify-content: center;
-        h3{
-            font-size: 1.9rem;
-            max-width: 45rem;
-            font-weight: 400;
-            font-family: "Montserrat", sans-serif, Arial, sans-serif;
-        }
-        h1{
-            padding-bottom: 3rem;
-            font-size: 4rem;
-            font-weight: 100;
-            font-family: "Montserrat", sans-serif, Arial, sans-serif;
-            span{
-                font-weight: 800;
-            }
-        }
-        a.get{
-            border: 3px solid #7CC4BB;
-            padding: 1.5rem 4rem;
-            color: $clr-light;
-            position: relative;
-            width: 50px;
-            height: 50px;
-            font-size: 2rem;
-           &:hover{
-            z-index: 99;
-            span{
-                color: $clr-light;
-            }
-           }
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 55px;
-                bottom: -1px;
-                z-index: 999;
-                transform: scaleX(0);
-                transform-origin: center;
-                transition: transform 0.25s ease-out;
-              }
-              &:hover:after {
-                background:#7CC4BB;
-                transform: scaleX(1);
-                transform-origin: center;
-                z-index: -1;
-              }
-              &.z{
-                z-index: -999;
-              }
-        }
-    }
+//     }
+//     .slider#first{
+//         background-image: url("../img/slide.jpg");
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         background-position: center;
+//         width: 100%;
+//         height: 100vh;
+//     }
+//     .slider#second{
+//         background-image: url("../img/slide2.jpg");
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         background-position: center;
+//         width: 100%;
+//         height: 100vh;
+//     }
+//     .slider#third{
+//         background-image: url("../img/slide3.jpg");
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         background-position: center;
+//         width: 100%;
+//         height: 100vh;
+//     }
+//     .first{
+//         color: $clr-light;
+//         justify-content: center;
+//         h3{
+//             font-size: 1.9rem;
+//             max-width: 45rem;
+//             font-weight: 400;
+//             font-family: "Montserrat", sans-serif, Arial, sans-serif;
+//         }
+//         h1{
+//             padding-bottom: 3rem;
+//             font-size: 4rem;
+//             font-weight: 100;
+//             font-family: "Montserrat", sans-serif, Arial, sans-serif;
+//             span{
+//                 font-weight: 800;
+//             }
+//         }
+//         a.get{
+//             border: 3px solid #7CC4BB;
+//             padding: 1.5rem 4rem;
+//             color: $clr-light;
+//             position: relative;
+//             width: 50px;
+//             height: 50px;
+//             font-size: 2rem;
+//             &:hover{
+//             z-index: 99;
+//             span{
+//                 color: $clr-light;
+//             }
+//            }
+//             &:after {
+//                 content: "";
+//                 position: absolute;
+//                 left: 0;
+//                 width: 100%;
+//                 height: 55px;
+//                 bottom: -1px;
+//                 z-index: 999;
+//                 transform: scaleX(0);
+//                 transform-origin: center;
+//                 transition: transform 0.25s ease-out;
+//               }
+//               &:hover:after {
+//                 background:#7CC4BB;
+//                 transform: scaleX(1);
+//                 transform-origin: center;
+//                 z-index: -1;
+//               }
+//               &.z{
+//                 z-index: -999;
+//               }
+//         }
+//     }
     
-    @include mediaQuery($break-lg){
+//     @include mediaQuery($break-lg){
       
-            .slider{
-                .first{
-                    h3{
-                        max-width: unset;
-                    }
-                    h1{
-                        font-size: 8rem;
-                    }
-                }
-            }
+//             .slider{
+//                 .first{
+//                     h3{
+//                         max-width: unset;
+//                     }
+//                     h1{
+//                         font-size: 8rem;
+//                     }
+//                 }
+//             }
            
         
-    }
+//     }
     
+// }
+
+
+.up{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    position: fixed;
+    display: none;
+    transition: 300ms;
+    a{
+        height: fit-content;
+        transition: 300ms;
+        i{
+            padding: .6rem .8rem;
+            color: $clr-light;
+            font-size: 2.5rem;
+            background: #01B3A7;
+            transition: opacity 0.2s;
+            transition: 300ms;
+            cursor: pointer;
+            // transform: translate3d(0, 0, 0);
+        }
+    }
+    &.show{
+        display: block;
+    }
 }
+
 
 
