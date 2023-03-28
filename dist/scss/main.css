@@ -1015,8 +1015,9 @@ body {
   margin: 1rem;
   font-family: "Montserrat", sans-serif, Arial, sans-serif;
 }
-.discover__wrapper .dis img {
+.discover__wrapper img {
   width: 100%;
+  margin: 0 auto;
 }
 .discover__wrapper .distext h3 {
   margin-top: 3.5rem;
@@ -1052,10 +1053,20 @@ body {
   color: gray;
   margin: 1rem;
 }
-.discover__wrapper .dis__content .dis__text {
+.discover__wrapper .dis__content {
+  transition: 0.5s ease;
+}
+.discover__wrapper .dis__content.active {
+  display: block;
+}
+.discover__wrapper .dis__content.active {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.discover__wrapper .dis__content .dis__sec__content {
   padding: 2rem 0;
 }
-.discover__wrapper .dis__content .dis__text p {
+.discover__wrapper .dis__content .dis__sec__content p {
   text-align: center;
 }
 .discover__wrapper .dis__content .dis__button {
@@ -1097,6 +1108,10 @@ body {
     display: flex;
     justify-content: center;
     place-items: center;
+  }
+  .discover__wrapper img {
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .discover__wrapper .disfull {
     margin-left: 4rem;
@@ -1176,6 +1191,171 @@ body {
   }
 }
 
-.hot h3 {
+.hot__wrapper h2 {
   text-align: center;
+  color: #151515;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.hot__wrapper .content__text h5 a {
+  color: #151515;
+  font-size: 2.1rem;
+  font-weight: 500;
+  transition: 300ms;
+}
+.hot__wrapper .content__text h5 a:hover {
+  color: #7CC4BB;
+  transition: 300ms;
+}
+.hot__wrapper .content__text .review {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+.hot__wrapper .content__text .review ul {
+  display: flex;
+  font-size: 1.5rem;
+  color: #FFCC00;
+}
+.hot__wrapper .content__text .review ul li {
+  margin-right: 0.5rem;
+}
+.hot__wrapper .content__text .review a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #9b9b9b;
+  margin-left: 1rem;
+}
+.hot__wrapper .content__text .review a:hover {
+  color: #51BB88;
+  transition: 300ms;
+}
+.hot__wrapper .content__text p {
+  color: #9b9b9b;
+  margin-bottom: 2rem;
+}
+.hot__wrapper .content__text .btn {
+  position: relative;
+}
+.hot__wrapper .content__text .btn span {
+  z-index: 1;
+  position: relative;
+}
+.hot__wrapper .content__text .btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 19%;
+  width: 60%;
+  height: 100%;
+  background: #7CC4BB;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms;
+}
+.hot__wrapper .content__text .btn:hover:after {
+  width: 100%;
+  left: 0;
+  visibility: visible;
+  opacity: 1;
+}
+.hot__wrapper .content__text .btn:hover {
+  border: 2px solid #7CC4BB;
+}
+.hot__card {
+  padding: 5rem 0;
+}
+.hot__card__content {
+  margin: 3rem 0;
+  position: relative;
+}
+.hot__card__content .hot__img {
+  margin-bottom: 3rem;
+  max-width: 100rem;
+  max-height: 30rem;
+  overflow: hidden;
+}
+.hot__card__content .hot__img img {
+  width: 55rem;
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  transition: 0.5s ease;
+}
+.hot__card__content .hot__img span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.6rem 2rem;
+  background-color: #7CC4BB;
+  color: #ffffff;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 970px) {
+  .hot__wrapper .hot__card__content {
+    display: flex;
+  }
+  .hot__wrapper .hot__card__content .hot__img {
+    width: 50rem;
+    height: 50rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+    transition: 0.5s ease;
+  }
+  .hot__wrapper .hot__card__content .hot__img:hover img {
+    transform: scale(1.1);
+    transition: 300ms;
+  }
+  .hot__wrapper .hot__card__content .content__text {
+    max-width: 40rem;
+    margin: 3rem;
+  }
+}
+
+.impressions {
+  background-image: url("../img/beach.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+}
+.impressions__content {
+  text-align: center;
+  color: #ffffff;
+}
+.impressions__content h2 {
+  margin: 0 auto;
+  max-width: 50rem;
+}
+.impressions__content h2 span {
+  font-size: 4rem;
+}
+.impressions__content h2 span #waiting {
+  font-weight: 800;
+}
+.impressions__content p {
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 0.6rem 1.8rem;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  transition: 300ms;
+  color: #ffffff;
+}
+
+.outline-darken {
+  border: 2px solid #25252b;
+  color: #25252b;
+  padding: 1.5rem 3.5rem;
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */

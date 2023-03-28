@@ -50,3 +50,16 @@ window.addEventListener("scroll", () => {
     btop.classList.remove("show")
   }
 });
+
+const discover =document.querySelectorAll(".discover__nav__link");
+const discoverContent =document.querySelectorAll(".dis__sec__content");
+discover.forEach((star) => {
+  star.addEventListener("click", () => {
+    removeActiveStar();
+    star.classList.add("active");
+    const activeContent= document.querySelector(`#${star.id}-content`);
+    removeactiveContent();
+    activeContent.classList.add("active");
+  })
+});
+

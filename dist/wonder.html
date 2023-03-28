@@ -221,43 +221,47 @@
     <section class="discover">
         <div class="container">
             <div class="discover__wrapper">
-                <div class="dis">
                     <img src="./img/sea.jpg" alt="">
-                </div>
                 <div class="disfull">
                 <div class="distext">
                     <h3>Discover New Horizons</h3>
                     <ul>
-                        <li class="active">
-                            <a href="">about us</a>
-                        </li>
-                        <li>
-                            <a href="">why choose us</a>
-                        </li>
-                        <li>
-                            <a href="">our mission</a>
-                        </li>
+                        <li id="discover-1" class="discover__nav__link active"><a href="javascript:void(0)">about us</a></li>
+                        <li id="discover-2" class="discover__nav__link"><a href="javascript:void(0)">why choose us</a></li>
+                        <li id="discover-2" class="discover__nav__link"><a href="javascript:void(0)">our mission</a></li>
                     </ul>
                 </div>
 
                 <div class="dis__content">
-                    <div class="dis__text">
+                    <div id="discover-1-content" class="dis__sec__content active">
                         <p>Wonder Tour is committed to bringing our
                              clients the best in value and quality
                               travel arrangements. We are passionate 
                               about travel and sharing the world's 
                               wonders with you.</p>
-                        <!-- <p>We are proud to offer excellent quality and 
+                              <div class="dis__button">
+                                <a href="" id="gg"> Get in Touch</a>
+                                <a href="" id="read">Read More</a>
+                            </div>
+                    </div>
+                    <div id="discover-2-content" class="dis__sec__content">
+                        <p>We are proud to offer excellent quality and 
                             value for money in our tours, which give you 
                             the chance to experience your chosen destination 
                             in an authentic and exciting way.</p>
+                            <div class="dis__button">
+                                <a href="" id="gg"> Get in Touch</a>
+                                <a href="" id="read">Read More</a>
+                            </div>
+                    </div>
+                    <div id="discover-3-content" class="dis__sec__content">
                         <p>Our mission is to provide the ultimate travel 
                             planning experience while becoming a one-stop 
-                            shop for every travel service available in the industry.</p> -->
-                    </div>
-                    <div class="dis__button">
-                        <a href="" id="gg"> Get in Touch</a>
-                        <a href="" id="read">Read More</a>
+                            shop for every travel service available in the industry.</p>
+                            <div class="dis__button">
+                                <a href="" id="gg"> Get in Touch</a>
+                                <a href="" id="read">Read More</a>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -339,15 +343,77 @@
 
     <section class="hot">
         <div class="container">
-            <h3>Hot Tours</h3>
             <div class="hot__wrapper">
-                <img src="./img/hotsea.jpg" alt="">
-                <div class="hot__text">
-                    <h4>Spain, Benidorm</h4>
+                <h2>Hot Service</h2>
+                <div class="hot__card">
+                    <div class="hot__card__content">
+                        <div class="hot__img">
+                            <img src="./img/hotsea.jpg" alt="">
+                            <span>$790</span>
+                        </div>
+                        <div class="content__text">
+                            <h5><a href="">Spain, Benidorm</a></h5>
+                            <div class="review">
+                                <ul>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                </ul>
+                                <a href="">4 customer reviews</a>
+                            </div>
+                            <p>Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...</p>
+                            <a href="" class="btn outline-darken"><span>Buy This Tour</span></a>
+                        </div>
+                    </div>
+                     <div class="hot__card__content">
+                        <div class="hot__img">
+                            <img src="./img/hotsea1.jpg" alt="">
+                            <span>$890</span>
+                        </div>
+                        <div class="content__text">
+                            <h5><a href="">Mauritius Island, Africa</a></h5>
+                            <div class="review">
+                                <ul>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star"></i></li>
+                                    <li><i class="fa-solid fa-star-half-stroke"></i></li>
+                                </ul>
+                                <a href="">5 customer reviews</a>
+                            </div>
+                            <p>The beautiful and inviting island nation of Mauritius is an ideal ‘flop and drop’ at the conclusion of your safari. Indulge in the delightful scents of the fragrant...</p>
+                            <a href="" class="btn outline-darken"><span>Buy This Tour</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="impressions">
+        <div class="container">
+            <div class="impressions__wrapper">
+                <!-- <img src="./img/beach.jpg" alt=""> -->
+                <div class="impressions__content">
+                    <div class="impressions__text">
+                        <h2><span>First-class Impressions</span>
+                            <span id="waiting">are Waiting for You!</span></h2>
+                            <p>Our agency offers travelers various tours and 
+                                excursions with destinations all over the world. 
+                                Browse our website to find your dream tour!</p>
+                                <a href="">Book a Tour Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
     <div class="up">
         <a href ="#header"><i class="fa-solid fa-chevron-up"></i></a>
